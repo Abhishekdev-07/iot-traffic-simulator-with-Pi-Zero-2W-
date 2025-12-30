@@ -6,7 +6,7 @@ A comprehensive IoT traffic control system featuring a Flask web server that syn
 A full-stack IoT project that integrates a **Raspberry Pi Zero 2 W**, a **Flask Web Server**, and a custom **3D-printed enclosure**.
 
 ## 🎥 Project Demo
-[video link](url)
+https://drive.google.com/drive/folders/1Jfs1Jl3DIglap87cihvXda-pgHBHJroV?usp=sharing
 
 ## 🛠️ How it Works
 1. **Web Interface:** Built with HTML/CSS/JS. It features a car animation for easier visualization of the project.
