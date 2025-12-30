@@ -1,0 +1,61 @@
+/* The Container (The Road) */
+#road {
+    width: 100%;
+    height: 160px;           /* Height is required to make it visible */
+    background-color: #333;  /* Dark asphalt gray */
+    position: relative;      /* Acts as the (0,0) origin for the car */
+    overflow: hidden;        /* Prevents the car from showing outside the road */
+    border-bottom: 8px solid #555;
+    margin-top: 50px;
+}
+
+/* Optional: Adding road markings (Dashed Yellow Line) */
+#road::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 4px dashed yellow;
+}
+
+/* The Car Logic */
+#car {
+    font-size: 60px;         /* Size of your car emoji */
+    position: absolute;
+    bottom: 15px;            /* Sits on the road */
+    left: -100px;            /* Start hidden off-screen to the left */
+    
+    /* Physics: How the movement feels */
+    transition: left 2s ease-in-out; 
+    
+    /* THE FLIP: Makes the emoji face Right instead of Left */
+    display: inline-block;
+    transform: scaleX(-1);   
+}
+
+/* POSITION 1: At the Traffic Light (Stop Line) */
+.at-stop-line {
+    left: 25% !important;    /* 0% is left, 100% is right */
+}
+
+/* POSITION 2: Driving past the light and away */
+.drive-away {
+    left: 120% !important;   /* Move completely off the right side */
+}
+
+/* Buttons Styling (Optional, just to make them look better) */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
